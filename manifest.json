@@ -1,0 +1,20 @@
+{
+  "name": "Techvelter Digital Hub",
+  "short_name": "Techvelter",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#E5E0D9",
+  "theme_color": "#2B5288",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
