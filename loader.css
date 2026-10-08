@@ -1,0 +1,27 @@
+#tv-loader{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(100deg,#05051a,#1b1b7a 55%,#2f2fc4);
+  background-size:200% 200%;animation:tvbg 8s ease-in-out infinite alternate;
+  opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s ease}
+#tv-loader.show{opacity:1;visibility:visible}
+@keyframes tvbg{to{background-position:100% 50%}}
+#tv-loader svg{width:46vmin;max-width:220px;overflow:visible;animation:tvfloat 2.4s ease-in-out infinite}
+#tv-loader .s{fill:none;stroke:#fff;stroke-width:26;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:200;stroke-dashoffset:200;filter:drop-shadow(0 0 8px rgba(255,255,255,.55));
+  animation:tvdraw 2.4s ease-in-out infinite}
+#tv-loader .s2{animation-delay:.25s}
+#tv-loader .s3{animation-delay:.5s}
+@keyframes tvdraw{0%{stroke-dashoffset:200;opacity:.2}45%,75%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-200;opacity:.2}}
+@keyframes tvfloat{50%{transform:translateY(-8px) scale(1.04)}}
+#tv-name{margin:22px 0 0;font-size:clamp(28px,9vw,46px);font-weight:700;display:flex;
+  font-family:"Helvetica Neue",Arial,sans-serif}
+#tv-name span{opacity:0;transform:translateY(10px);animation:tvin 2.4s ease-in-out infinite}
+@keyframes tvin{0%{opacity:0;transform:translateY(10px)}25%,80%{opacity:1;transform:none}100%{opacity:0}}
+#tv-loader .bar{margin-top:28px;width:min(60vw,240px);height:4px;border-radius:4px;
+  background:rgba(255,255,255,.18);overflow:hidden}
+#tv-loader .bar i{display:block;height:100%;width:40%;border-radius:4px;background:#fff;
+  animation:tvslide 1.4s ease-in-out infinite}
+@keyframes tvslide{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+#tv-loader .loading-text{margin:14px 0 0;font-size:13px;letter-spacing:3px;
+  text-transform:uppercase;opacity:.7;animation:tvblink 1.4s ease-in-out infinite}
+@keyframes tvblink{50%{opacity:.25}}

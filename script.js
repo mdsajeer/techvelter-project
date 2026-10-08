@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 // Scroll Reveal Animation using Intersection Observer
 const observerOptions = {
     threshold: 0.1
@@ -19,6 +28,7 @@ document.querySelectorAll('.glass-pane, .section-title').forEach(el => {
     el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
     observer.observe(el);
 });
+
 
 // Smooth Scrolling for Nav Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
